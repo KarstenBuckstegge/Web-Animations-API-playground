@@ -1,0 +1,20 @@
+{
+  "name": "Web-Animations-API-playfield",
+  "version": "0.0.1",
+  "description": "A place to try out the new Web Animations API",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KarstenBuckstegge/Web-Animations-API-playfield.git"
+  },
+  "license": "NONE",
+  "devDependencies": {
+    "gulp": "~3.8.9",
+    "gulp-autoprefixer": "~2.0.0",
+    "gulp-concat": "~2.4.1",
+    "gulp-sass": "~1.2.3",
+    "gulp-sourcemaps": "~1.1.0",
+    "gulp-uglify": "~1.0.1",
+    "gulp-watch": "~2.0.0",
+    "gulp-livereload": "~2.1.1"
+  }
+}
