@@ -55,16 +55,16 @@ gulp.task('watch', ['build'], function () {
   watch([
     dirs.src.sass + '/**/*.scss'
   ], 
-  function (files) {
-    gulp.start('css');
+  function (files, cb) {
+    gulp.start('css', cb);
   });
 
   // Watch JS
   watch([
   	dirs.src.js + '/**/*.js'
   ],
-  function (files) {
-    gulp.start('js');
+  function (files, cb) {
+    gulp.start('js', cb);
   });
 });
 
