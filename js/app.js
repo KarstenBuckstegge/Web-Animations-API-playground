@@ -113,6 +113,71 @@ var seq = new AnimationSequence([seqMove, seqFade]);
 var seqPlayer = document.timeline.play(seq);
 
 // ======================================================================== 
+// 								Animation Group & Sequence
+// ========================================================================
+
+var bothBox = document.getElementById("box-both");
+
+// keyframes
+bothMoveKeyframes = [
+	{left: '0'},
+	{left: '300px'}
+];
+
+bothWiggleKeyframes = [
+	{top: '0px'},
+	{top: '-10px'},
+	{top: '10px'}
+];
+
+bothColorKeyframes = [
+	{transform: 'rotateY(0deg)', 'background-color': '#BADA55'},
+	{transform: 'rotateY(720deg)', 'background-color': '#C0FFEE'}
+];
+
+
+// timings
+bothMoveTiming = {
+	duration: 1000,
+	fill: 'forwards'
+};
+
+bothMoveRevTiming = {
+	duration: 1000,
+	direction: 'reverse'
+}
+
+bothWiggleTiming = {
+	duration: 100,
+	direction: "alternate",
+	iterations: 10
+}
+
+bothColorTiming = {
+	duration: 1000,
+	fill: 'forwards'
+}
+
+// define animations for the sequence
+var bothMove = new Animation(bothBox, bothMoveKeyframes, bothMoveTiming);
+var bothMoveRev = new Animation(bothBox, bothMoveKeyframes, bothMoveRevTiming);
+var bothWiggle = new Animation(bothBox, bothWiggleKeyframes, bothWiggleTiming);
+var bothColor = new Animation(bothBox, bothColorKeyframes, bothColorTiming);
+
+// define groups
+var bothTurnColor = new AnimationGroup([bothWiggle, bothColor]);
+
+bothTurnColor.onfinish = function() {
+	bothMove.timing.direction = "reverse";
+}
+
+// define sequence (timing not supported yet)
+var both = new AnimationSequence([bothMove, bothTurnColor, bothMoveRev]);
+
+// start the player
+var bothPlayer = document.timeline.play(both);
+
+// ======================================================================== 
 // 								Path Animation (not in the polyfill yet)
 // ========================================================================
 
