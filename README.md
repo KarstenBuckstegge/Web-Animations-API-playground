@@ -22,8 +22,8 @@ This playfield so far contains experiments for:
 Resources
 ---------
 
-[W3C Spec](http://www.w3.org/TR/web-animations)
-[GitHub](https://github.com/web-animations) (polyfill & demos)
-[Polymer](https://www.polymer-project.org/platform/web-animations.html) (Certain Basics)
-[Smashing Mag](http://www.smashingmagazine.com/2014/11/18/the-state-of-animation-2014/) (Web Animations API Basics)
+[W3C Spec](http://www.w3.org/TR/web-animations)  
+[GitHub](https://github.com/web-animations) (polyfill & demos)  
+[Polymer](https://www.polymer-project.org/platform/web-animations.html) (Certain Basics)  
+[Smashing Mag](http://www.smashingmagazine.com/2014/11/18/the-state-of-animation-2014/) (Web Animations API Basics)  
 [HTML5Rocks](http://updates.html5rocks.com/2014/05/Web-Animations---element-animate-is-now-in-Chrome-36) (What's in Chrome so far)
