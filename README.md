@@ -1,5 +1,5 @@
-Web-Animations-API-playfield
-============================
+Web-Animations-API-playground
+=============================
 
 A place to try out the new Web Animations API.
 
